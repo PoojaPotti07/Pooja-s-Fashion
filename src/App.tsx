@@ -26,6 +26,7 @@ import { AuthModal } from './components/AuthModal';
 import { AdminDashboard } from './components/AdminDashboard';
 import { SizeGuideModal } from './components/SizeGuideModal';
 import { WhatsAppButton } from './components/WhatsAppButton';
+import { ChatbotWidget } from './components/ChatbotWidget';
 import { ToastContainer } from './components/ToastContainer';
 
 export default function App() {
@@ -75,6 +76,7 @@ export default function App() {
 
         {/* Float Affordances */}
         <WhatsAppButton />
+        <ChatbotWidget />
         <ToastContainer />
       </div>
     </StoreProvider>
