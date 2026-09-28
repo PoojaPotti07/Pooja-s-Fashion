@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 import { Product, Category, OrderStatus, Coupon } from '../types';
+import { IMAGES } from '../assets/images';
 
 export const AdminDashboard: React.FC = () => {
   const {
@@ -53,7 +54,7 @@ export const AdminDashboard: React.FC = () => {
   const [prodStock, setProdStock] = useState(15);
   const [prodColors, setProdColors] = useState('Crimson, Gold, Rose');
   const [prodSizes, setProdSizes] = useState('Free Size');
-  const [prodImage, setProdImage] = useState('/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg');
+  const [prodImage, setProdImage] = useState(IMAGES.saree);
   const [prodDesc, setProdDesc] = useState('Handcrafted pure weave designed with exquisite border work.');
 
   // New Coupon form
@@ -79,7 +80,7 @@ export const AdminDashboard: React.FC = () => {
     setProdStock(15);
     setProdColors('Crimson, Gold, Rose');
     setProdSizes('Free Size');
-    setProdImage('/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg');
+    setProdImage(IMAGES.saree);
     setProdDesc('Handcrafted pure weave designed with exquisite border work.');
     setIsProductFormOpen(true);
   };
@@ -132,7 +133,7 @@ export const AdminDashboard: React.FC = () => {
         inStock: Number(prodStock) > 0,
         colors: colorsArr.length > 0 ? colorsArr : ['Original'],
         sizes: sizesArr.length > 0 ? sizesArr : ['Free Size'],
-        images: [prodImage.trim() || '/src/assets/images/hero_pooja_fashion_editorial_1790578107709.jpg'],
+        images: [prodImage.trim() || IMAGES.hero],
         description: prodDesc.trim(),
         rating: 5.0,
         reviewCount: 1,

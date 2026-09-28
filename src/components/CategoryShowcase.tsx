@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
+import { IMAGES } from '../assets/images';
 
 export const CategoryShowcase: React.FC = () => {
   const { setSelectedCategory } = useStore();
@@ -10,28 +11,28 @@ export const CategoryShowcase: React.FC = () => {
       title: 'Handloom Sarees',
       subtitle: 'Banarasi, Katan & Kanjeevaram',
       category: 'Sarees',
-      image: '/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg',
+      image: IMAGES.saree,
       itemCount: '40+ Styles'
     },
     {
       title: 'Chikankari Kurtis',
       subtitle: 'Georgette & Mulmul Silhouettes',
       category: 'Kurtis',
-      image: '/src/assets/images/cat_kurti_chikankari_rose_1790578133198.jpg',
+      image: IMAGES.kurti,
       itemCount: '35+ Styles'
     },
     {
       title: 'Dress Materials',
       subtitle: 'Chanderi & Handblock Suits',
       category: 'Dress Materials',
-      image: '/src/assets/images/cat_dress_material_chanderi_1790578146269.jpg',
+      image: IMAGES.dressMaterial,
       itemCount: '28+ Sets'
     },
     {
       title: 'Festive Ethnic Wear',
       subtitle: 'Royal Lehengas & Shararas',
       category: 'Ethnic Wear',
-      image: '/src/assets/images/cat_ethnic_lehenga_champagne_1790578156857.jpg',
+      image: IMAGES.lehenga,
       itemCount: '22+ Ensembles'
     }
   ];

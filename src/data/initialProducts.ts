@@ -1,4 +1,5 @@
 import { Product, Coupon } from '../types';
+import { IMAGES } from '../assets/images';
 
 export const INITIAL_PRODUCTS: Product[] = [
   {
@@ -12,8 +13,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Crimson Red', 'Royal Gold', 'Wine Maroon'],
     sizes: ['Free Size (5.5m + 0.8m Blouse)'],
     images: [
-      '/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg',
-      '/src/assets/images/hero_pooja_fashion_editorial_1790578107709.jpg'
+      IMAGES.saree,
+      IMAGES.hero
     ],
     rating: 4.9,
     reviewCount: 48,
@@ -35,8 +36,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Pastel Rose', 'Ivory Cream', 'Powder Blue', 'Mint Green'],
     sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
     images: [
-      '/src/assets/images/cat_kurti_chikankari_rose_1790578133198.jpg',
-      '/src/assets/images/hero_pooja_fashion_editorial_1790578107709.jpg'
+      IMAGES.kurti,
+      IMAGES.hero
     ],
     rating: 4.8,
     reviewCount: 62,
@@ -58,8 +59,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Sage Ivory', 'Dusty Rose', 'Mustard Gold'],
     sizes: ['Unstitched Set (Top 2.5m, Bottom 2.5m, Dupatta 2.3m)'],
     images: [
-      '/src/assets/images/cat_dress_material_chanderi_1790578146269.jpg',
-      '/src/assets/images/cat_kurti_chikankari_rose_1790578133198.jpg'
+      IMAGES.dressMaterial,
+      IMAGES.kurti
     ],
     rating: 4.7,
     reviewCount: 39,
@@ -81,8 +82,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Champagne Gold', 'Blush Peach', 'Emerald Teal'],
     sizes: ['S (Bust 34)', 'M (Bust 36)', 'L (Bust 38)', 'XL (Bust 40)', 'Semi-Stitched'],
     images: [
-      '/src/assets/images/cat_ethnic_lehenga_champagne_1790578156857.jpg',
-      '/src/assets/images/hero_pooja_fashion_editorial_1790578107709.jpg'
+      IMAGES.lehenga,
+      IMAGES.hero
     ],
     rating: 5.0,
     reviewCount: 31,
@@ -104,8 +105,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Antique Gold', 'Copper Rose', 'Emerald Green'],
     sizes: ['Free Size (5.5m + 0.8m Blouse)'],
     images: [
-      '/src/assets/images/hero_pooja_fashion_editorial_1790578107709.jpg',
-      '/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg'
+      IMAGES.hero,
+      IMAGES.saree
     ],
     rating: 4.9,
     reviewCount: 54,
@@ -127,8 +128,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Indigo Blue', 'Terracotta Red', 'Olive Sage'],
     sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
     images: [
-      '/src/assets/images/cat_kurti_chikankari_rose_1790578133198.jpg',
-      '/src/assets/images/cat_dress_material_chanderi_1790578146269.jpg'
+      IMAGES.kurti,
+      IMAGES.dressMaterial
     ],
     rating: 4.6,
     reviewCount: 78,
@@ -150,8 +151,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Plum Wine', 'Deep Forest', 'Oatmeal Beige'],
     sizes: ['Unstitched Set (Top 2.5m, Bottom 2.5m, Stole 2.2m)'],
     images: [
-      '/src/assets/images/cat_dress_material_chanderi_1790578146269.jpg',
-      '/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg'
+      IMAGES.dressMaterial,
+      IMAGES.saree
     ],
     rating: 4.8,
     reviewCount: 27,
@@ -173,8 +174,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Lilac Bloom', 'Powder Peach', 'Mint Sherbet'],
     sizes: ['S', 'M', 'L', 'XL'],
     images: [
-      '/src/assets/images/cat_ethnic_lehenga_champagne_1790578156857.jpg',
-      '/src/assets/images/cat_kurti_chikankari_rose_1790578133198.jpg'
+      IMAGES.lehenga,
+      IMAGES.kurti
     ],
     rating: 4.7,
     reviewCount: 19,
@@ -196,8 +197,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Oatmeal Beige', 'Dusty Coral', 'Olive Khaki'],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     images: [
-      '/src/assets/images/cat_kurti_chikankari_rose_1790578133198.jpg',
-      '/src/assets/images/cat_dress_material_chanderi_1790578146269.jpg'
+      IMAGES.kurti,
+      IMAGES.dressMaterial
     ],
     rating: 4.6,
     reviewCount: 42,
@@ -219,8 +220,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Maroon Crimson', 'Emerald Green', 'Royal Black'],
     sizes: ['One Size (8" x 9.5")'],
     images: [
-      '/src/assets/images/cat_ethnic_lehenga_champagne_1790578156857.jpg',
-      '/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg'
+      IMAGES.lehenga,
+      IMAGES.saree
     ],
     rating: 4.9,
     reviewCount: 88,
@@ -242,8 +243,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Blush Pink & Gold', 'Ruby Green & Gold', 'Pearl White'],
     sizes: ['Adjustable Dori Length'],
     images: [
-      '/src/assets/images/hero_pooja_fashion_editorial_1790578107709.jpg',
-      '/src/assets/images/cat_ethnic_lehenga_champagne_1790578156857.jpg'
+      IMAGES.hero,
+      IMAGES.lehenga
     ],
     rating: 4.8,
     reviewCount: 53,
@@ -265,8 +266,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     colors: ['Sandalwood Peach', 'Dusty Lavender', 'Seafoam Mint'],
     sizes: ['Free Size (5.5m + 0.8m Blouse)'],
     images: [
-      '/src/assets/images/hero_pooja_fashion_editorial_1790578107709.jpg',
-      '/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg'
+      IMAGES.hero,
+      IMAGES.saree
     ],
     rating: 4.8,
     reviewCount: 36,

@@ -91,12 +91,29 @@ interface StoreContextType {
 
 const StoreContext = createContext<StoreContextType | undefined>(undefined);
 
+const normalizeProduct = (p: Product): Product => {
+  const defaultProd = INITIAL_PRODUCTS.find((ip) => ip.id === p.id);
+  const fixedImages = p.images.map((img, idx) => {
+    if (img.startsWith('/src/assets/images/')) {
+      return defaultProd?.images[idx] || defaultProd?.images[0] || img.replace('/src/assets/images/', '/assets/images/');
+    }
+    return img;
+  });
+  return { ...p, images: fixedImages };
+};
+
 export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Load state from localStorage or fallback to defaults
   const [products, setProducts] = useState<Product[]>(() => {
     try {
       const saved = localStorage.getItem('pf_products');
-      return saved ? JSON.parse(saved) : INITIAL_PRODUCTS;
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          return parsed.map(normalizeProduct);
+        }
+      }
+      return INITIAL_PRODUCTS;
     } catch {
       return INITIAL_PRODUCTS;
     }
@@ -105,7 +122,16 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [cart, setCart] = useState<CartItem[]>(() => {
     try {
       const saved = localStorage.getItem('pf_cart');
-      return saved ? JSON.parse(saved) : [];
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          return parsed.map((item: CartItem) => ({
+            ...item,
+            product: normalizeProduct(item.product)
+          }));
+        }
+      }
+      return [];
     } catch {
       return [];
     }
@@ -123,7 +149,25 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [orders, setOrders] = useState<Order[]>(() => {
     try {
       const saved = localStorage.getItem('pf_orders');
-      return saved ? JSON.parse(saved) : INITIAL_SAMPLE_ORDERS;
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          return parsed.map((order: Order) => {
+            const defaultOrder = INITIAL_SAMPLE_ORDERS.find((o) => o.id === order.id);
+            return {
+              ...order,
+              items: order.items.map((it, idx) => {
+                if (it.image.startsWith('/src/assets/images/')) {
+                  const match = defaultOrder?.items[idx]?.image || it.image.replace('/src/assets/images/', '/assets/images/');
+                  return { ...it, image: match };
+                }
+                return it;
+              })
+            };
+          });
+        }
+      }
+      return INITIAL_SAMPLE_ORDERS;
     } catch {
       return INITIAL_SAMPLE_ORDERS;
     }

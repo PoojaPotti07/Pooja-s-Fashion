@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Sparkles, ShieldCheck, Truck, RefreshCw } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
+import { IMAGES } from '../assets/images';
 
 export const HeroBanner: React.FC = () => {
   const { setSelectedCategory } = useStore();
@@ -26,7 +27,7 @@ export const HeroBanner: React.FC = () => {
       {/* Background Hero Image with Measured Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_pooja_fashion_editorial_1790578107709.jpg"
+          src={IMAGES.hero}
           alt="Pooja Fashion Luxury Indian Festive Collection"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center brightness-[0.88] scale-[1.01] transition-transform duration-1000 ease-out"

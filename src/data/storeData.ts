@@ -1,4 +1,5 @@
 import { Review, Order } from '../types';
+import { IMAGES } from '../assets/images';
 
 export const INITIAL_REVIEWS: Review[] = [
   {
@@ -57,7 +58,7 @@ export const INSTAGRAM_POSTS = [
   {
     id: 'ig-1',
     handle: '@divya_drapes',
-    image: '/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg',
+    image: IMAGES.saree,
     caption: 'Draped in pure crimson heirloom magic from @PoojaFashion. Nothing matches the grace of handloom Banarasi silk. #PoojaFashionDiaries',
     taggedProduct: 'Royal Crimson Banarasi Katan Silk Saree',
     productId: 'pf-01',
@@ -66,7 +67,7 @@ export const INSTAGRAM_POSTS = [
   {
     id: 'ig-2',
     handle: '@aarti_lifestyle',
-    image: '/src/assets/images/cat_kurti_chikankari_rose_1790578133198.jpg',
+    image: IMAGES.kurti,
     caption: 'Pastel poetry in motion. When in doubt, wear Lucknowi Chikankari that breathes with you. @PoojaFashion',
     taggedProduct: 'Noor-e-Gul Lucknowi Chikankari Anarkali Kurti',
     productId: 'pf-02',
@@ -75,7 +76,7 @@ export const INSTAGRAM_POSTS = [
   {
     id: 'ig-3',
     handle: '@shreya_vogue',
-    image: '/src/assets/images/cat_ethnic_lehenga_champagne_1790578156857.jpg',
+    image: IMAGES.lehenga,
     caption: 'Golden hour in champagne mirror-work perfection. Sangeet ready thanks to @PoojaFashion!',
     taggedProduct: 'Jahanara Champagne Festive Mirror-Work Lehenga Set',
     productId: 'pf-04',
@@ -84,7 +85,7 @@ export const INSTAGRAM_POSTS = [
   {
     id: 'ig-4',
     handle: '@neha_couture',
-    image: '/src/assets/images/cat_dress_material_chanderi_1790578146269.jpg',
+    image: IMAGES.dressMaterial,
     caption: 'Unstitched treasures tailored to my silhouette. The Chanderi silk texture is a dream. #HandcraftedIndia',
     taggedProduct: 'Aafreen Chanderi Silk Embroidered Dress Material',
     productId: 'pf-03',
@@ -100,7 +101,7 @@ export const INITIAL_SAMPLE_ORDERS: Order[] = [
       {
         productId: 'pf-01',
         productName: 'Royal Crimson Banarasi Katan Silk Saree',
-        image: '/src/assets/images/cat_saree_banarasi_silk_1790578120499.jpg',
+        image: IMAGES.saree,
         size: 'Free Size (5.5m + 0.8m Blouse)',
         color: 'Crimson Red',
         quantity: 1,
@@ -133,7 +134,7 @@ export const INITIAL_SAMPLE_ORDERS: Order[] = [
       {
         productId: 'pf-02',
         productName: 'Noor-e-Gul Lucknowi Chikankari Anarkali Kurti',
-        image: '/src/assets/images/cat_kurti_chikankari_rose_1790578133198.jpg',
+        image: IMAGES.kurti,
         size: 'M',
         color: 'Pastel Rose',
         quantity: 1,
@@ -142,7 +143,7 @@ export const INITIAL_SAMPLE_ORDERS: Order[] = [
       {
         productId: 'pf-10',
         productName: 'Vintage Zardozi Velvet Bridal Potli Bag',
-        image: '/src/assets/images/cat_ethnic_lehenga_champagne_1790578156857.jpg',
+        image: IMAGES.lehenga,
         size: 'One Size (8" x 9.5")',
         color: 'Maroon Crimson',
         quantity: 1,
